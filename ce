@@ -1,0 +1,10 @@
+#!/bin/bash
+function mkexec {
+ echo '#!/bin/bash' >  $1
+ chmod $2 $1 
+ if [ -n /user/bin/gedit ] 
+ then
+  gedit $1
+ fi
+}
+mkexec $1 755

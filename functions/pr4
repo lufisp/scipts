@@ -1,0 +1,9 @@
+pr4()
+{
+ ## calculate column width
+ local width=$(( (${COLUMNS:-80} - 2) / 4 ))
+
+ ## Note that braces are necessary on the second $width to separate it from    's'
+ local s=%-$width.${width}s
+ printf "$s $s $s $s\n" "$@"
+}

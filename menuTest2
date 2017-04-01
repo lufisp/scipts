@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo 'Select a directory: '
+select DIR in /bin /usr /etc
+do
+  if [ -n $DIR ]
+  then
+    case $REPLY in
+      1 ) echo "you have select -> /bin" ;;
+      2 ) echo "you have select -> /usr" ;;
+      3 ) echo "you have select -> /etc" ;;
+      * ) echo "you have select nothing"
+    esac
+    break
+  else
+    echo 'invalide choise'
+  fi
+done

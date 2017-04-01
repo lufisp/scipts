@@ -1,0 +1,15 @@
+#!/bin/bash
+var1="O rato roeu a roupa do rei de roma"
+echo $var1
+echo "Extracting roupa..."
+tmp=${var1##*roupa}
+echo 'O resultado de tmp=${var1##roupa} é: ' $tmp
+tmp2=${var1%%$tmp}
+echo 'O resultado de tmp2=${var1%%$tmp} é: ' $tmp2
+array=($tmp2)
+arraySize=${#array[@]}
+
+echo ${array[$(( $arraySize - 1 ))]}
+
+
+

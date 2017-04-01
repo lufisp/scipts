@@ -1,0 +1,12 @@
+_revstr()
+{
+ var=$1
+ _REVSTR=
+ while [ -n "$var" ]
+ do
+  temp=${var#?}
+  _REVSTR=${var%"$temp"}$_REVSTR
+  var=$temp
+ done
+}
+

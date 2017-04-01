@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo 'Select a directory: '
+select DIR in /bin /usr /etc
+do
+  if [ -n $DIR ]
+  then
+    DIR=$DIR
+    echo you have selected $DIR
+    export DIR
+    break
+  else
+    echo 'invalide choise'
+  fi
+done

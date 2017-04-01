@@ -1,0 +1,3 @@
+echo entre uma frase
+read -a frase
+echo ${frase[1]}  ${frase[2]}
